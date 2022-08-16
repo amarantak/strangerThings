@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body{
+  font-family: 'EB Garamond', serif;
+    background-color: #0c0404;
+    color: whitesmoke;
+}
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(18, 1fr);
+    height: 320vh;
+    font-family: 'EB Garamond', serif;
+    background-color: #0c0404;
+    color: whitesmoke;
+
+
+  }
+.logo{
+  display: grid;
+  grid-area: 1/1/2/3;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  height: 15vh;
+}
+
+
+nav {
+  display: grid;
+  grid-area: 1/3/2/16;
+  text-transform: uppercase;
+  justify-content: center;
+  align-content: center;
+
+}
+
+nav ul {
+  display: inline-flex;
+  align-items: center;
+
+
+}
+
+ul:hover li:not(:hover) a {
+  opacity: 0.2;
+}
+
+li {
+  list-style: none;
+  align-self: center;
+  padding: 0 2em;
+  cursor: pointer;
+
+}
+li a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: whitesmoke;
+  letter-spacing: .2em;
+  transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+ul li::after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #3498db;
+  transform: scaleX(0);
+  transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+ul li:hover::after, ul li.active::after {
+  transform: scaleX(1);
+}
+li a:hover {
+  color: #b31916;
+ 
+}
+
+.content {
+    display: grid;
+    grid-area: 1/16/2/19;
+    align-items: center;
+    justify-content: center;
+    font-family: 'EB Garamond', serif;
+   
+  }
+
+  .content form, .content p{ 
+    padding-left:2vw; padding-top:0;
+  }
+.content a{
+  text-decoration: none;
+}
+  
+form {
+    align-items: center;
+
+  }
+  input[type=submit]{
+    background-color: #b31916;
+    padding: .2em;
+    border-radius: 6px;
+
+  }
+  .content button{
+    margin-left: 2vw;
+    display: inline-flex;
+    background-color: #b31916;
+    padding: .2em;
+    border-radius: 6px;
+
+  }
+  
+  svg {
+    color: white;
+    fill: currentColor;
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+  }
+
+.video-container {
+    grid-area: 2/1/7/19;
+    width: 100vw;
+    height: 90vh;
+
+  }
+  iframe {
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    width: 100vw;
+    height: 90vh;
+    transform: translate(-50%, -50%);
+  }
+  
+  .video-container .button {
+    position: absolute;
+    color: white;
+    left: 23%;
+    top: 87%;
+    transform: translate(-50%, -50%);
+    background-color: #b31916;
+    padding: 14px 8px;
+    border-radius: 6px;
+    font-weight:600;
+    letter-spacing: .1em;
+    text-decoration: none;
+  }
+
+  .video-container .button:hover {
+    color: white;
+  }
+  
+  .cta2 h2{
+    padding: 1em;
+    font-size: 2em;
+
+  }
+  .cta2 {
+    display: grid;
+    grid-area: 7/1/18/19;
+    justify-content: center;
+    height: 240vh;
+    background-color: #0c0404;
+
+  }
+  .cta2-content {
+    display: grid;
+    margin: 5vh 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fill, minmax(260px, 1fr));
+    grid-gap: 2em;
+  }
+  .card{
+    background-color:rgb(91, 4, 4, 0.3);
+  }
+
+  .title{
+    padding: 0 1em;
+  }
+
+  .title a{
+    color: whitesmoke;
+    font-style: italic;
+  }
+  
+footer{
+  display: grid;
+  grid-area: 18/1/19/19;
+  align-items: center;
+  text-align: center;
+  background-color: #0c0404;
+
+}
+
+.footer-content{
+  display: block;
+}
+
+.social a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: #b31916;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: whitesmoke;
+  transition: all 0.5s ease;
+}
+.social a:hover {
+  color: #24262b;
+  background-color: darkgrey;
+}
+
+.copyright {
+  text-align: center;
+  align-items: center;
+}
+
+/*************************Seasons Page*****************************/
+
+.seasons {
+  display: grid;
+  grid-area: 2/1/18/19;
+  justify-content: center;
+  height: 200vh;
+  background-color: #0c0404;
+
+}
+.seasons-content {
+  display: grid;
+  margin: 5vh 0;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto-fill, minmax(260px, 1fr));
+  grid-gap: 2em;
+  align-self: center;
+  justify-content: center;
+
+
+}
+
+.seasons-cards{
+  background-color:#5b0404;
+  height:85vh;
+  justify-content: center;
+
+ 
+}
+.seasons-cards img{
+  margin: auto;
+  display: block;
+}
+
+.card-title{
+  padding: 1em;
+}
+
+.card-title a{
+  color: whitesmoke;
+  font-style: italic;
+}
+
+/***************************Signup*******************************/
+
+.signup-content form, .content p{ padding-left:2vw; padding-top:2vh;}
+
+
+/***************************Dasboard*******************************/
+
+.pages-container {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(18, 1fr);
+  height: 150vh;
+  font-family: 'EB Garamond', serif;
+  background-color: #0c0404;
+  color: whitesmoke;
+}
+.pages-logo{
+  display: grid;
+  grid-area: 1/1/2/3;
+}
+nav {
+  display: grid;
+  grid-area: 1/3/2/16;
+  align-content: center;
+  justify-content: center;
+}
+
+.logout{
+  display: grid;
+  grid-area: 1/16/2/19;
+  text-transform: uppercase;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.logout a{
+  color: whitesmoke;
+}
+.pages-main{
+  display: grid;
+  grid-area: 2/1/18/19;
+  grid-gap: 0 2em;
+  margin: 0 2em;
+}
+.pages-main h2{
+  margin: 1em 0;
+}
